@@ -1,9 +1,76 @@
-page-bg = #eee
+@import '_flexy'
+@import '_colors'
+
+*
+	box-sizing border-box
 
 body
-	background page-bg
+	background c-body-bg
 	font-family 'Helvetica Neue', Helvetica, sans-serif
-	
+
 
 p, li
 	line-height 1.5
+
+
+.btn
+	cursor pointer
+
+
+.App
+	padding 1em
+	
+	.App--heading
+		margin 0.25em 0 0.5em 0.25em
+		font-weight 200
+
+
+.Board
+	border-radius 5px
+	border 1px solid c-Board-border
+	background c-Board-bg
+	width 300px
+	min-width 300px
+	margin-right 1rem
+	overflow hidden
+	
+	.Board--heading
+		padding 1rem 1rem 0
+
+
+.ItemList
+	list-style none
+	padding 0 1rem
+
+
+.Item
+	padding 0.5em 1em
+	border-bottom 1px solid c-Item-border
+	
+	.btn
+		opacity 0
+		
+	&:hover .btn
+		opacity 1
+
+
+.ItemForm
+	background c-ItemForm-bg
+	padding 1rem
+	
+
+.EditableHeading
+	cursor pointer
+	
+
+	.EditableHeading--input
+		border 0
+		outline 0
+		padding 0.55rem 1rem 0.15rem
+		margin 0
+		font inherit
+		font-size 2em
+		font-weight 500
+		width 100%
+		display block
+		color c-EditableHeading-edit

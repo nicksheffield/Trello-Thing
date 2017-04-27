@@ -1,0 +1,27 @@
+[
+	{
+		"name": "Testing board",
+		"items": [
+			{
+				"content": "Do a thing"
+			},
+			{
+				"content": "Feed the dog"
+			},
+			{
+				"content": "Buy beer"
+			},
+			{
+				"content": "heyo"
+			}
+		]
+	},
+	{
+		"name": "Second board",
+		"items": [
+			{
+				"content": "Finish a feature"
+			}
+		]
+	}
+]
