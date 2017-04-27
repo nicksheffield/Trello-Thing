@@ -1,6 +1,5 @@
 import React from 'react'
-import Board from './Board.jsx'
-import data from '../data/boards.json'
+import BoardList from './BoardList.jsx'
 
 class App extends React.Component {
 	constructor(props) {
@@ -8,8 +7,14 @@ class App extends React.Component {
 
 		// State
 		this.state = {
-			boards: data
+			boards: []
 		}
+
+		fetch('http:\/\/localhost:8090/api/board').then((res) => {
+			res.json().then((json) => {
+				this.setState({boards: json})
+			})
+		})
 
 		// Events
 		this.addItem = this.addItem.bind(this)
@@ -47,22 +52,16 @@ class App extends React.Component {
 		}
 
 		return (
-			<div className="App">
-				<h1 className="App--heading">Trello Thing</h1>
+			<div className="App f-r1 f-c">
+				<div className="f-r f-ac f-jb App--heading">
+					<h1>Trello Thing</h1>
 
-				<div className="f-r f-js f-as">
-					{ this.state.boards.length ? (
-						this.state.boards.map((board, i) =>
-							<Board key={i} board={board} {...props} />
-						)
-					) : (
-						<p>No boards</p>
-					)}
-
-					<button className="btn btn-success" onClick={this.addBoard}>
-						<i className="fa fa-plus"></i> New Board
+					<button className="btn btn-success btn-icon" onClick={this.addBoard}>
+						<i className="fa fa-plus"></i> New board
 					</button>
 				</div>
+				
+				<BoardList boards={this.state.boards} {...props} />
 			</div>
 		)
 	}

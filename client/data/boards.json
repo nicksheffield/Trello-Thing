@@ -1,25 +1,32 @@
 [
 	{
+		"id": "bfeb779b-de66-4d09-936e-b15c6899e3ce",
 		"name": "Testing board",
 		"items": [
 			{
+				"id": "26c79394-41be-45eb-8f99-2a080745dd62",
 				"content": "Do a thing"
 			},
 			{
+				"id": "ce07946b-b2cf-49be-b889-ba9d3b6b5464",
 				"content": "Feed the dog"
 			},
 			{
+				"id": "29257fad-7694-439b-a485-f128d983ac34",
 				"content": "Buy beer"
 			},
 			{
+				"id": "210cc1a9-af47-40e1-876e-33564ef59398",
 				"content": "heyo"
 			}
 		]
 	},
 	{
+		"id": "d5ea7fc5-f035-4800-aec0-e99bc98b29b0",
 		"name": "Second board",
 		"items": [
 			{
+				"id": "87e3d3fb-6320-46ef-b45a-27926ab39ba1",
 				"content": "Finish a feature"
 			}
 		]

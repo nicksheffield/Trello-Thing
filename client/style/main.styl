@@ -13,16 +13,36 @@ p, li
 	line-height 1.5
 
 
+#root
+	display flex
+	flex-direction column
+	min-height 200vh
+
+
 .btn
 	cursor pointer
+	
+	&.btn-icon i.fa
+		margin-right 0.5em
 
 
 .App
-	padding 1em
 	
 	.App--heading
-		margin 0.25em 0 0.5em 0.25em
-		font-weight 200
+		margin 0
+		padding 1em
+		background c-App--heading-bg
+		border-bottom 1px solid c-App--heading-border
+		
+		h1
+			font-weight 200
+			margin-left 0.75rem
+
+
+.BoardList
+	margin-top 1em
+	padding 0 1em
+	overflow-x auto
 
 
 .Board
@@ -61,7 +81,6 @@ p, li
 
 .EditableHeading
 	cursor pointer
-	
 
 	.EditableHeading--input
 		border 0
