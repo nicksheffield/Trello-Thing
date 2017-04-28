@@ -5,7 +5,7 @@ class EditableHeading extends React.Component {
 		super(props)
 
 		this.state = {
-			input: props.text,
+			input: props.board.name,
 			focused: false
 		}
 
@@ -27,6 +27,8 @@ class EditableHeading extends React.Component {
 
 	blur(event) {
 		this.setState({focused: false})
+		this.props.board.name = this.state.input
+		this.props.saveBoard(this.props.board)
 	}
 
 	input(event) {
@@ -36,6 +38,8 @@ class EditableHeading extends React.Component {
 	keyup(event) {
 		if(event.which == 13) {
 			this.setState({focused: false})
+			this.props.board.name = this.state.input
+			this.props.saveBoard(this.props.board)
 		}
 	}
 
@@ -45,7 +49,7 @@ class EditableHeading extends React.Component {
 				{ this.state.focused ? (
 					<input type="text" className="EditableHeading--input" ref="input" value={this.state.input} onChange={this.input} onBlur={this.blur} onKeyUp={this.keyup} />
 				) : (
-					<h2 className={this.props.className} onClick={this.focus}>{this.state.input}</h2>
+					<h2 className={this.props.className} onClick={this.focus}>{this.props.board.name}</h2>
 				)}
 			</div>
 		)

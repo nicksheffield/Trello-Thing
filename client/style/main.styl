@@ -16,7 +16,7 @@ p, li
 #root
 	display flex
 	flex-direction column
-	min-height 200vh
+	min-height 100vh
 
 
 .btn
@@ -53,9 +53,21 @@ p, li
 	min-width 300px
 	margin-right 1rem
 	overflow hidden
+	position relative
+	animation ScaleIn 0.1s
 	
 	.Board--heading
 		padding 1rem 1rem 0
+		
+	.Board--delete
+		position absolute
+		top 0.5em
+		right 0.5em
+		opacity 0
+		transition opacity 0.1s
+		
+	&:hover .Board--delete
+		opacity 1
 
 
 .ItemList
@@ -93,3 +105,12 @@ p, li
 		width 100%
 		display block
 		color c-EditableHeading-edit
+		
+
+@keyframes ScaleIn
+	0%
+		opacity 0
+		transform scale(0)
+	100%
+		opacity 1
+		transform scale(1)

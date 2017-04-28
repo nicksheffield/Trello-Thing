@@ -16,7 +16,13 @@ class Board extends React.Component {
 		const {board, addItem, removeItem} = this.props
 		return (
 			<div className="Board f-c">
-				<EditableHeading text={board.name} className="Board--heading" />
+				<EditableHeading className="Board--heading" board={board} saveBoard={this.props.saveBoard} />
+
+				<div className="Board--delete">
+					<button className="btn btn-outline-danger btn-sm" onClick={() => this.props.removeBoard(board)}>
+						<i className="fa fa-trash-o"></i>
+					</button>
+				</div>
 
 				<ItemList items={board.items} board={board} removeItem={removeItem} />
 				<ItemForm board={board} addItem={addItem} />
