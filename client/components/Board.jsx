@@ -2,6 +2,7 @@ import React from 'react'
 import ItemList from './ItemList.jsx'
 import ItemForm from './ItemForm.jsx'
 import EditableHeading from './EditableHeading.jsx'
+import {Link} from 'react-router'
 
 class Board extends React.Component {
 	constructor(props) {
@@ -25,6 +26,9 @@ class Board extends React.Component {
 				</div>
 
 				<ItemList items={board.items} board={board} removeItem={removeItem} />
+
+				<Link to={"/single/" + board.id}>View alone</Link>
+
 				<ItemForm board={board} addItem={addItem} />
 			</div>
 		)

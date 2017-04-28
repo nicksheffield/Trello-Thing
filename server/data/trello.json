@@ -23,13 +23,27 @@
     },
     {
       "id": "044609cc-27f0-44f0-8e4a-56ab473916b2",
-      "name": "renamed",
-      "items": []
+      "name": "new board",
+      "items": [
+        {
+          "content": "A new item"
+        },
+        {
+          "content": "2 new 2 item"
+        },
+        {
+          "content": "new item 3: tokyo drift"
+        }
+      ]
     },
     {
-      "id": "83362123-2695-4019-af4f-179ca6975256",
-      "name": "New board",
-      "items": []
+      "id": "bfe1c9be-2e19-46a9-b368-f56b48e97370",
+      "name": "New board name",
+      "items": [
+        {
+          "content": "new thing"
+        }
+      ]
     }
   ]
 }
